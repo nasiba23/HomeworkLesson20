@@ -1,0 +1,34 @@
+﻿@model Person
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Registration";
+}
+
+<form action="Create" method="post" xmlns="http://www.w3.org/1999/html">
+    <div class="row">
+        <div class="col-md-2">Last Name</div>
+        <div class="col-md-4">
+            <input required autocomplete="off" asp-for="LastName" class="form-control" type="text" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">First Name</div>
+        <div class="col-md-4">
+            <input required autocomplete="off" asp-for="FirstName" class="form-control" type="text" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Middle Name</div>
+        <div class="col-md-4">
+            <input required autocomplete="off" asp-for="MiddleName" class="form-control" type="text" />
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <input class="btn btn-success" type="submit" value="Save" />
+        </div>
+    </div>
+</form>

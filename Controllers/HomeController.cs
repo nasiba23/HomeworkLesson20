@@ -13,13 +13,10 @@ namespace HomeworkLesson20.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         private IDatabaseService _db;
-        private DatabaseService db1;
 
-        public HomeController(ILogger<HomeController> logger, IDatabaseService db)
+        public HomeController(IDatabaseService db)
         {
-            _logger = logger;
             _db = db;
         }
 
