@@ -1,0 +1,47 @@
+﻿@model Person
+
+@{
+    Layout = "_Layout"; 
+    ViewData["Title"] = "Search";
+}
+
+<form action="GetById" method="get">
+    <div class="row">
+        <div class="col-md-2">Search by Id</div>
+        <div class="col-md-4">
+            <input required autocomplete="off" name="Id" class="form-control" type="text" />
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <input class="btn btn-success" type="submit" value="Search"/>
+        </div>
+    </div>
+</form>
+<br>
+
+@if (Model != null)
+{
+    <div class="text-center">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Middle Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">@Model.Id</th>
+                <td>@Model.LastName</td>
+                <td>@Model.FirstName</td>
+                <td>@Model.MiddleName</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+}
