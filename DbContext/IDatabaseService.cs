@@ -8,6 +8,6 @@ namespace HomeworkLesson20.DbContext
         List<T> GetList<T>();
         void Create(Person person);
         Person SearchId(int id);
-        Person SearchName(string name, string lastName, string middleName);
+        Person SearchName(string lastName, string firstName, string middleName);
     }
 }

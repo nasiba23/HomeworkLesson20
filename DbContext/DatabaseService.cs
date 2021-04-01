@@ -41,10 +41,12 @@ namespace HomeworkLesson20.DbContext
             }
         }
 
-        public Person SearchName(string name, string lastName, string middleName)
+        public Person SearchName(string lastName, string firstName, string middleName)
         {
-            var person = new Person();
-            return person;
+            using (var con = new SqlConnection(_conString))
+            {
+                return con.Query<Person>($"SELECT * FROM PERSON WHERE LastName = '{lastName}' AND FirstName = '{firstName}' AND MiddleName = '{middleName}'").FirstOrDefault();
+            }
         }
     }
 }

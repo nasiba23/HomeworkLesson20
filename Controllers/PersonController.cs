@@ -28,10 +28,22 @@ namespace HomeworkLesson20.Controllers
             return View();
         }
 
-        public IActionResult GetById(int Id)
+        public IActionResult GetById(int id)
         {
-            var person = _db.SearchId(Id);
+            var person = _db.SearchId(id);
             return View("SearchId", person);
+        }
+
+        public IActionResult SearchName()
+        {
+            return View();
+        }
+
+        public IActionResult GetByName(string name)
+        {
+            var names = name.Split(" ");
+            var person = _db.SearchName(names[0], names[1], names[2]);
+            return View("SearchName", person);
         }
     }
 }

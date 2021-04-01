@@ -5,11 +5,11 @@
     ViewData["Title"] = "Search";
 }
 
-<form action="GetById" method="get">
+<form action="GetByName" method="get">
     <div class="row">
-        <div class="col-md-2">Search by Id</div>
+        <div class="col-md-2">Search by Name (Order: lastname, firstname, middlename)</div>
         <div class="col-md-4">
-            <input required autocomplete="off" name="id" class="form-control" type="text" />
+            <input required autocomplete="off" name="name" class="form-control" type="text" />
         </div>
     </div>
     <br>
